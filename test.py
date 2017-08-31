@@ -50,13 +50,13 @@ class htmlParser(HTMLParser):
 def ugly_solution(html):
     begin = html.find('<div class="entryWrapper">')
     end = html.find('<div class="comments">')
-    html=html[begin:end]
+    html = html[begin:end]
     import re
-    c=re.compile('''<div class="social.+?</div>|<div class="examples"><div class="moreInfo"><button data-behaviour="ga-event" data-value="[a-zA-Z ]*">[a-zA-Z ]*</button></div>|<section class="pronSection etym">.+?</section>''')
+    c = re.compile(
+        '''<div class="social.+?</div>|<div class="examples"><div class="moreInfo"><button data-behaviour="ga-event" data-value="[a-zA-Z ]*">[a-zA-Z ]*</button></div>|<section class="pronSection etym">.+?</section>''')
     # html = re.sub('<div class="social.+?</div>', '', html)
     # html = re.sub('<div class="examples"><div class="moreInfo"><button data-behaviour="ga-event" data-value="[a-zA-Z ]*">[a-zA-Z ]*</button></div>', '', html)
     # html = re.sub('<section class="pronSection etym">.+?</section>', '', html)
-    html = re.sub(c,'',html)
     return html
 
 
@@ -71,4 +71,16 @@ def test_find_1():
     open('test_main.html', 'w').write(s)
 
 
-test_find_1()
+def test_830():
+    import core
+    open('test_main.html', 'w').write(core.lookup('purple'))
+    main_html = open('test_main.html').read()
+    core._get_all_level_1(main_html)
+    core._get_all_level_2(main_html)
+    core._get_all_level_3(main_html)
+def test_901(the_word):
+    import core
+    the_dick=core.lookup(the_word)
+    import display
+    display.display_dict(the_dick)
+
