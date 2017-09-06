@@ -78,9 +78,10 @@ def test_830():
     core._get_all_level_1(main_html)
     core._get_all_level_2(main_html)
     core._get_all_level_3(main_html)
+
+
 def test_901(the_word):
     import core
-    the_dick=core.lookup(the_word)
+    the_dick = core.lookup(the_word)
     import display
-    display.display_dict(the_dick)
-
+    display.main(the_dick)
