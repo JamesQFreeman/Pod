@@ -9,7 +9,7 @@ Pod stands for Python Oxford Dictionary. You can use this one without moving you
 
 ## Installation
 
-have no idea how to pack into to pip
+I have no idea how to pack this project into to pip.
 
 ## Usage
 
@@ -18,17 +18,20 @@ have no idea how to pack into to pip
 
 1. ```pod -l <word>```
 
-The program look up the word and shutdown
+Look up the word and exit.
 
 2. ```pod -d <word>```
 
-The program look up the word and open the dictionary(refer to no.3)
+Look up the word and open the dictionary (refer to no.3)
 
 3. ```pod```
 
-Open the dictionary, you can shut it down by type fuck at the end of each line
+Open the dictionary, you can exit the program by typing "fuck" at the end of each line.
 
 4. ```pod <word>```
+
+
+Abbreviated version of (1).
 
 ## Little Story
 
