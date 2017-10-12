@@ -6,7 +6,7 @@ import display
 def dict_loop():
     import test
     while 1:
-        word = input('Please type the word/phrase you want to look up:')
+        word = input('\n#Please type the word/phrase you want to look up:')
         if word[-4:] != 'fuck':
             display.main(core.lookup(word))
         else:
